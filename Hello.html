@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      .form-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 350px;
+      }
+      h2 {
+        text-align: center;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+      button {
+        background: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background: darkgreen;
+      }
+      .error {
+        color: red;
+        font-size: 0.9em;
+      }
+      table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        width: 80%;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Registration Form</h2>
+      <form id="regForm">
+        <input type="text" id="name" placeholder="Enter full name" />
+        <div class="error" id="nameError"></div>
+
+        <input type="email" id="email" placeholder="Enter email" />
+        <div class="error" id="emailError"></div>
+
+        <input type="password" id="password" placeholder="Enter password" />
+        <div class="error" id="passError"></div>
+
+        <input type="date" id="dob" />
+        <div class="error" id="dobError"></div>
+
+        <label
+          ><input type="checkbox" id="terms" /> Accept Terms & Conditions</label
+        >
+        <div class="error" id="termsError"></div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <h2>Entries</h2>
+    <table id="entriesTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>DOB</th>
+          <th>Accepted Terms?</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="hello.js"></script>
+  </body>
+</html>
